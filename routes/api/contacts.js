@@ -10,11 +10,11 @@ const {schemas} = require("../../models/contact")
 
 router.get("/", ctrlWrapper(ctrl.listContacts));
 
-router.get("/:contactId", isValidId, ctrlWrapper(ctrl.getContactById));
+router.get("/:id", isValidId, ctrlWrapper(ctrl.getContactById));
 
 router.post("/", validateBody(schemas.addSchema),ctrlWrapper(ctrl.addContact));
 
-router.delete("/:contactId", isValidId, ctrlWrapper(ctrl.removeContact));
+router.delete("/:id", isValidId, ctrlWrapper(ctrl.removeContact));
 
 router.put("/:id", isValidId, validateBody(schemas.addSchema),ctrlWrapper(ctrl.updateContact));
 
