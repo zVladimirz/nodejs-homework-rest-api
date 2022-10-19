@@ -1,5 +1,4 @@
-const Joi = require("joi")
-
+const Joi = require("joi");
 
 const addSchema = Joi.object({
   name: Joi.string().required(),
@@ -8,5 +7,5 @@ const addSchema = Joi.object({
 });
 
 module.exports = {
-    addSchema,
-}
+  addSchema,
+};
