@@ -5,6 +5,11 @@ const { handleSaveErrors } = require("../helpers");
 
 const contactSchema = new Schema(
   {
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: "user",
+      required: true,
+    },
     name: {
       type: String,
       required: [true, "Set name for contact"],
